@@ -15,6 +15,7 @@ html {
  */
 
 body {
+  font-family: "Source Sans Pro";
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
@@ -23,3 +24,60 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  background-color: #f4f1ec;  
+  margin-left: 2.4em;
+}
+
+.container {
+  background-color: #f4f1ec;
+}
+
+article {
+  border: 2px solid black;
+}
+
+article:hover {
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+article header {
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 24px;
+  margin-right: 24px;
+  
+}
+
+article .header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* article .header-bottom {
+  display: flex;
+  justify-self: flex-end  ;
+} */
+article footer {
+  height: 30px;
+  font-size:medium;
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+  margin-right: 24px;
+  border-top: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+
+article footer i:hover {
+  color: tomato;
+}

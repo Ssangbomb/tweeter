@@ -1,0 +1,33 @@
+nav {
+  font-size: 24px;
+  height: 120px;
+  background-color: #4056A1;
+  color :#FFFFFF;
+  width: auto;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  /* position: fixed; */
+  /* display: flex; */
+}
+
+span {
+  font-size: 40px;
+  font-family: "Bungee";
+}
+
+.left-side {
+  align-content: flex-end;
+}
+
+
+.right-left {
+  display: flex;
+  justify-content: space-between;
+  height: 120px;
+  align-items: end;
+  padding-bottom: 1em;
+}
+
+.fa-angles-down {
+  color: red;
+}
