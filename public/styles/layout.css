@@ -81,3 +81,7 @@ article footer {
 article footer i:hover {
   color: tomato;
 }
+
+article header .email {
+  color:rgb(215, 215, 215);
+}
