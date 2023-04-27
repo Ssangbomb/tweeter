@@ -32,6 +32,9 @@
 $(document).ready(function() {
 
   const createTweetElement = (tweet) => {
+    // if($tweet.content.text === "" || $tweet.content.text === null){
+    //   alert("you're putting empty tweet");
+    // }
     const $tweet = $(`
     <article class="tweet"> 
       <header>
@@ -86,16 +89,28 @@ $(document).ready(function() {
     console.log('the form has submitted');
   
     const urlencoded = $form.serialize();
-    console.log(urlencoded);
+
+    //stretch work! find the way better than substring.
+    const formVali = urlencoded.substring(5);
+    // console.log('formVali', formVali);
+    // console.log('decode one', decodeURI(formVali));
+    if( formVali === '' || formVali === null) {
+      $('.error').slideDown();
+    } else if (formVali.length > 140) {
+      $('.error').slideDown();
+      // $(".counter").toggleClass("negative", 'count' > 0);
+    } else {
+      $(".counter").load(".counter");
+      $('.error').slideUp();
+      $.ajax({
+        method: 'POST',
+        url: '/tweets',
+        data: urlencoded
+      }).then((newtweet) => {
+        loadTweets(newtweet);
+      })
+    }
   
-    $.ajax({
-      method: 'POST',
-      url: '/tweets',
-      data: urlencoded
-    }).then((newtweet) => {
-      console.log(newtweet);
-      loadTweets(newtweet);
-    })
   }) 
   loadTweets();
 });
