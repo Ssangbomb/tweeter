@@ -60,8 +60,10 @@ $(document).ready(function() {
     const formVali = urlencoded.substring(5);
     if( formVali === '' || formVali === null) {
       $('.error').slideDown();
+      $('.error').html('You give me a empty tweet');
     } else if (formVali.length > 140) {
       $('.error').slideDown();
+      $('.error').html('This is too long for your tweet');
     } else {
       $('.counter').html(140);
       $('#area').val('');
