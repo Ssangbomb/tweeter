@@ -15,3 +15,9 @@ This is the second project though lighthouse lab bootcamp. Tweeter is a simple, 
 
 - Express
 - Node 5.10.x or above
+
+## Screen Shot
+!["Main tweet page"](https://github.com/Ssangbomb/tweeter/blob/master/docs/tweet2.jpeg?raw=true)
+!["When tweet is over 140 string length"](https://github.com/Ssangbomb/tweeter/blob/master/docs/tweet1.jpeg?raw=true)
+!["mobile version"](https://github.com/Ssangbomb/tweeter/blob/master/docs/tweet3.jpeg?raw=true)
+
