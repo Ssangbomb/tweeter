@@ -1,11 +1,11 @@
+
 nav {
+  display: flex, contents;
   font-size: 24px;
   height: 120px;
-  background-color: #4056A1;
   color :#FFFFFF;
   width: auto;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+  padding: 20px;
   position: fixed;
   width: 100%;
 }
@@ -29,5 +29,36 @@ span {
 }
 
 .fa-angles-down {
+  margin-top: 10px;
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite  alternate;
   color: red;
+}
+
+@-webkit-keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+@media only screen and (min-width: 768px){
+  nav {
+  display: flex, contents;
+  font-size: 24px;
+  height: 120px;
+  background-color: #4056A1;
+  color :#FFFFFF;
+  width: auto;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  }
+
+  .tablet {
+    display: flex;
+    padding-top: 120px;
+  }
 }

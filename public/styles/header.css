@@ -9,3 +9,19 @@
   background-image: url(https://www.transparenttextures.com/patterns/brushed-alum.png);
   
 }
+
+@media only screen and (min-width: 768px){
+  .profile {
+    background-image: none;
+    background-color: #f4f1ec;
+  }
+  .profile .small-background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    background-color: rgb(194, 100, 0);
+    background-image: url(https://www.transparenttextures.com/patterns/brushed-alum.png);
+  }
+}
+

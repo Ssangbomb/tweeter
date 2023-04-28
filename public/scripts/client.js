@@ -4,37 +4,9 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// const data = [
-//   {
-//     "user": {
-//       "name": "Newton",
-//       "avatars": "https://i.imgur.com/73hZDYK.png"
-//       ,
-//       "handle": "@SirIsaac"
-//     },
-//     "content": {
-//       "text": "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//     "created_at": 1461116232227
-//   },
-//   {
-//     "user": {
-//       "name": "Descartes",
-//       "avatars": "https://i.imgur.com/nlhLi3I.png",
-//       "handle": "@rd" },
-//     "content": {
-//       "text": "Je pense , donc je suis"
-//     },
-//     "created_at": 1461113959088
-//   }
-// ]
-
 $(document).ready(function() {
 
   const createTweetElement = (tweet) => {
-    // if($tweet.content.text === "" || $tweet.content.text === null){
-    //   alert("you're putting empty tweet");
-    // }
     const $tweet = $(`
     <article class="tweet"> 
       <header>
@@ -60,9 +32,6 @@ $(document).ready(function() {
   const $tweetContainer = $("#tweet-container");
 
   const renderTweets = function(tweets) {
-    // loops through tweets
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
     for(let tweet of tweets) {
       const $tweet = createTweetElement(tweet);
       $tweetContainer.prepend($tweet);
@@ -85,22 +54,17 @@ $(document).ready(function() {
 
   $form.on('submit', (event) => {
     event.preventDefault();
-    
-    console.log('the form has submitted');
-  
+
     const urlencoded = $form.serialize();
 
-    //stretch work! find the way better than substring.
     const formVali = urlencoded.substring(5);
-    // console.log('formVali', formVali);
-    // console.log('decode one', decodeURI(formVali));
     if( formVali === '' || formVali === null) {
       $('.error').slideDown();
     } else if (formVali.length > 140) {
       $('.error').slideDown();
-      // $(".counter").toggleClass("negative", 'count' > 0);
     } else {
-      $(".counter").load(".counter");
+      $('.counter').html(140);
+      $('#area').val('');
       $('.error').slideUp();
       $.ajax({
         method: 'POST',
