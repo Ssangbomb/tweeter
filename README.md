@@ -1,8 +1,7 @@
-# Tweeter Project
+# Tweeter
 
-Tweeter is a simple, single-page Twitter clone.
+This is the second project though lighthouse lab bootcamp. Tweeter is a simple, single-page based on AJAX. It is the first time use jQurey and css though the bootcamp. It generate simple box include avavtar, text and time when they post on, when people tweet.  
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
 
 ## Getting Started
 
